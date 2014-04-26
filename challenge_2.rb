@@ -29,7 +29,7 @@ principal_amount = 100000.0
 # ====================
 
 loan_quotes.each do |quote|
-  puts "Your monthly payment will be #{pmt(quote["rate"], 30, 200000)}."
+  puts "Your monthly payment will be #{pmt(quote["rate"], number_of_payments, principal_amount)}."
 end
 
 
