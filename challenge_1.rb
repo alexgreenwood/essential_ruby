@@ -18,8 +18,8 @@ def pmt(rate, nper, pv)
 #   # Your code to implement the method goes here.
 #   # ============================================
 
-(rate * pv)/(1 - (1 + rate)*-nper)
-
+((rate/12) * pv)/(1 - ((1 + (rate/12))**(-nper*12)))
+# = ((6.5 / 100 / 12) * 200000) / (1 - ((1 + (6.5 / 100 / 12)) ^ (-30 * 12)))
 end
 
 puts "Your monthly payment will be #{pmt(0.065, 30, 200000)}."
